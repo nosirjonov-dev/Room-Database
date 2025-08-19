@@ -12,5 +12,8 @@ data class Todo(
     val createdAt:String,
     var status:String,
     @ColumnInfo(defaultValue = "0")
-    var finishedDate:String
+    var finishedDate:String,
+    @ColumnInfo(defaultValue = "false")
+    var isChecked : Boolean = false
 )
+

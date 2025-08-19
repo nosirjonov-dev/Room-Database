@@ -58,8 +58,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     val room_version = "2.7.2"
+
     implementation("androidx.room:room-ktx:$room_version")
-    kapt("androidx.room:room-compiler:$room_version")
-    // ixtiyoriy: test uchun
-    // testImplementation("androidx.room:room-testing:$room_version")
+    kapt("androidx.room:room-compiler:$room_version") // <-- annotationProcessor emas, kapt
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.2")
 }

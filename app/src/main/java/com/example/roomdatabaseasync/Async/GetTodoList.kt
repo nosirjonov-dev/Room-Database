@@ -7,7 +7,8 @@ import com.example.roomdatabaseasync.Database.TodoDao
 
 class GetTodoList(val todoDao: TodoDao, val getAllTodoCallBack: GetAllTodoCallBack): AsyncTask<Unit, Unit, List<Todo>>(){
     override fun doInBackground(vararg p0: Unit?): List<Todo> {
-        return todoDao.getAllTodo()
+        return emptyList()
+//        return todoDao.getAllTodo()
     }
 
     override fun onPostExecute(result: List<Todo>?) {

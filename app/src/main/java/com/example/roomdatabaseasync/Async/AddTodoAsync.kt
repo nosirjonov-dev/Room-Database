@@ -14,7 +14,7 @@ class AddTodoAsync(val todoDao: TodoDao, val addTodoCallBack: AddTodoCallBack): 
     override fun doInBackground(vararg todo: Todo?) {
         Thread.sleep(2000)
         todo[0]?.apply {
-            todoDao.insert(this)
+//            todoDao.insert(this)
         }
     }
 
